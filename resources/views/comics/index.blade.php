@@ -22,7 +22,11 @@
                             <td> {{ $comic->title }} </td>
                             <td>{{ $comic->series }}</td>
                             <td>{{ $comic->type }}</td>
-                            <td><a href="{{ route('comics.show', $comic->id) }}">show</a></td>
+                            <td>
+                                <a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">
+                                    <i class="fa-regular fa-eye"></i>
+                                </a>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
