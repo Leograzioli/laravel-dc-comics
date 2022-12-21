@@ -1,0 +1,26 @@
+.jumbotron {
+    position: relative;
+    height: 400px;
+    background-image: url('../img/jumbotron.jpg');
+}
+
+.series {
+   position: absolute;
+   bottom: 0;
+   padding: 0.5rem 2rem;
+   transform: translateY(50%);
+}
+
+.ms_card-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.ms_card-txt {
+    text-transform: uppercase;
+}

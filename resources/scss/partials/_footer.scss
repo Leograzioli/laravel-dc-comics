@@ -1,0 +1,30 @@
+footer {
+    .footer-top {
+        background-image: url('../img/footer-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 2rem 0;
+        overflow: hidden;
+        .links {
+            width: 50%;
+            .col {
+                margin-right: 2rem;
+                h3 {
+                    color: white;
+                    margin: 1rem 0;
+                }
+                li {
+                    line-height: 1.5rem;
+                }
+            }
+        }
+        .logo-footer {
+            position: relative;
+            width: 50%;
+            img {
+                position: absolute;
+                top: -130px;
+            }
+        }
+    }
+}
