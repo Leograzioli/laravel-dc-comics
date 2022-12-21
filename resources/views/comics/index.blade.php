@@ -27,6 +27,8 @@
                     @endforeach
                 </tbody>
             </table>
+
+            <a href=" {{ route('comics.create') }} " class="btn btn-primary"> Add new comic</a>
         </div>
     </div>
 @endsection
