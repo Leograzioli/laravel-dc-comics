@@ -1,3 +1,57 @@
+<?php 
+$links = [
+            [
+                'name' => 'CHARACTERS',
+                'href' => '/characters',
+
+            ],
+            [
+                'name' => 'COMICS',
+                'href' => '/comics',
+
+            ],
+            [
+                'name' => 'MOVIES',
+                'href' => '/movies',
+
+            ],
+            [
+                'name' => 'TV',
+                'href' => '/tv',
+
+            ],
+            [
+                'name' => 'GAMES',
+                'href' => '/games',
+
+            ],
+            [
+                'name' => 'COLLECTIBLES',
+                'href' => '/collectibles',
+
+            ],
+            [
+                'name' => 'VIDEOS',
+                'href' => '/videos',
+
+            ],
+            [
+                'name' => 'FANS',
+                'href' => '/fans',
+
+            ],
+            [
+                'name' => 'NEWS',
+                'href' => '/new',
+
+            ],
+            [
+                'name' => 'SHOP',
+                'href' => '/shop',
+
+            ],
+        ]
+?>
 <header>
 
     <div class="bg-primary">
@@ -12,7 +66,9 @@
 
             {{-- logo  --}}
             <div class="nav-logo">
-                <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
+                <a href="/">
+                    <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="">
+                </a>
             </div>
 
             {{-- links --}}
