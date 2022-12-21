@@ -26,7 +26,7 @@ class ComicsController extends Controller
      */
     public function create()
     {
-        return view('comics/create');
+        return view('comics.create');
     }
 
     /**
@@ -54,170 +54,7 @@ class ComicsController extends Controller
     public function show($id)
     {
         $comics = Comic::findOrFail($id);
-        $data = [
-            'comics' => $comics,
-            'links' => [
-                [
-                    'name' => 'CHARACTERS',
-                    'href' => '/characters',
-
-                ],
-                [
-                    'name' => 'COMICS',
-                    'href' => '/comics',
-
-                ],
-                [
-                    'name' => 'MOVIES',
-                    'href' => '/movies',
-
-                ],
-                [
-                    'name' => 'TV',
-                    'href' => '/tv',
-
-                ],
-                [
-                    'name' => 'GAMES',
-                    'href' => '/games',
-
-                ],
-                [
-                    'name' => 'COLLECTIBLES',
-                    'href' => '/collectibles',
-
-                ],
-                [
-                    'name' => 'VIDEOS',
-                    'href' => '/videos',
-
-                ],
-                [
-                    'name' => 'FANS',
-                    'href' => '/fans',
-
-                ],
-                [
-                    'name' => 'NEWS',
-                    'href' => '/new',
-
-                ],
-                [
-                    'name' => 'SHOP',
-                    'href' => '/shop',
-
-                ],
-            ],
-            'dcComicsData' => [
-                [
-                    'name' => 'Characters',
-                    'href' => '/Characters'
-                ],
-                [
-                    'name' => 'Comics',
-                    'href' => '/Comics'
-                ],
-                [
-                    'name' => 'Moviess',
-                    'href' => '/Moviess'
-                ],
-                [
-                    'name' => 'TV',
-                    'href' => '/TV'
-                ],
-                [
-                    'name' => 'Games',
-                    'href' => '/Games'
-                ],
-                [
-                    'name' => 'Videos',
-                    'href' => '/Videos'
-                ],
-                [
-                    'name' => 'News',
-                    'href' => '/News'
-                ]
-            ],
-            'shopData' => [
-                [
-                    'name' => 'Shop DC',
-                    'href' => '/Shop-DC'
-                ],
-                [
-                    'name' => 'Shop DC Collectibles',
-                    'href' => '/Shop-DC-Collectibles'
-                ]
-            ],
-            'dcData' => [
-                [
-                    'name' => 'Terms Of Use',
-                    'href' => '/Terms-Of-Use'
-                ],
-                [
-                    'name' => 'Privacy policy(New)',
-                    'href' => '/Privacy-policy'
-                ],
-                [
-                    'name' => 'Ad Choices',
-                    'href' => '/ad-choise'
-                ],
-                [
-                    'name' => 'Advertising',
-                    'href' => '/advertising'
-                ],
-                [
-                    'name' => 'Jobs',
-                    'href' => '/jobs'
-                ],
-                [
-                    'name' => 'Subscription',
-                    'href' => '/subscription'
-                ],
-                [
-                    'name' => 'Talent Workshops',
-                    'href' => '/talent-workshops'
-                ],
-                [
-                    'name' => 'CPSC Certificates',
-                    'href' => '/cpsc-certificates'
-                ],
-                [
-                    'name' => 'Ratings',
-                    'href' => '/ratings'
-                ],
-                [
-                    'name' => 'Shop Help',
-                    'href' => '/shop-help'
-                ],
-                [
-                    'name' => 'Contact Us',
-                    'href' => '/contact-us'
-                ],
-            ],
-            'sites' => [
-                [
-                    'name' => 'DC',
-                    'href' => '/DC'
-                ],
-                [
-                    'name' => 'MAD Magazine',
-                    'href' => '/MAD-Magazine'
-                ],
-                [
-                    'name' => 'DC Kids',
-                    'href' => '/DC-Kids'
-                ],
-                [
-                    'name' => 'DC Universe',
-                    'href' => '/DC-Universe'
-                ],
-                [
-                    'name' => 'DC Power Visa',
-                    'href' => '/power-visa'
-                ],
-            ]
-        ];
-        return view('comics.show', $data);
+        return view('comics.show',compact('comics'));
     }
 
     /**
@@ -251,6 +88,7 @@ class ComicsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Comic::destroy($id);
+        return redirect()->route('comics.index');
     }
 }

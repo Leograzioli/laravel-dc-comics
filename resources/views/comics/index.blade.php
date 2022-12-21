@@ -22,10 +22,15 @@
                             <td> {{ $comic->title }} </td>
                             <td>{{ $comic->series }}</td>
                             <td>{{ $comic->type }}</td>
-                            <td>
-                                <a class="btn btn-primary" href="{{ route('comics.show', $comic->id) }}">
+                            <td class="d-flex">
+                                <a class="btn btn-primary me-1" href="{{ route('comics.show', $comic->id) }}">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
