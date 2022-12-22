@@ -18,6 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $comics = comic::all();
     return view('home', compact('comics'));
-});
+})->name('home');
 
 Route::resource('comics', ComicsController::class);

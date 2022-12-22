@@ -23,13 +23,19 @@
                             <td>{{ $comic->series }}</td>
                             <td>{{ $comic->type }}</td>
                             <td class="d-flex">
+
+                                {{-- to see details --}}
                                 <a class="btn btn-primary me-1" href="{{ route('comics.show', $comic->id) }}">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
+
+                                {{-- to delete product--}}
                                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
                                 </form>
                             </td>
                         </tr>
@@ -37,6 +43,7 @@
                 </tbody>
             </table>
 
+            {{-- to add new produc--}}
             <a href=" {{ route('comics.create') }} " class="btn btn-primary"> Add new comic</a>
         </div>
     </div>
