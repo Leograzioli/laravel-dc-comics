@@ -25,15 +25,20 @@
                             <td class="d-flex">
 
                                 {{-- to see details --}}
-                                <a class="btn btn-primary me-1" href="{{ route('comics.show', $comic->id) }}">
+                                <a class="btn btn-success me-1" href="{{ route('comics.show', $comic->id) }}">
                                     <i class="fa-regular fa-eye"></i>
+                                </a>
+
+                                {{-- to edit details --}}
+                                <a class="btn btn-warning me-1" href="{{ route('comics.edit', $comic->id) }}">
+                                    <i class="fa-solid fa-pencil"></i>
                                 </a>
 
                                 {{-- to delete product--}}
                                 <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">
+                                    <button type="submit" onclick="return confirm('you are deleting {{$comic->title}}, are you sure?')" class="btn btn-danger">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </button>
                                 </form>
