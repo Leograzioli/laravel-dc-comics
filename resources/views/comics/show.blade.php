@@ -8,33 +8,33 @@
             <div class="row justify-content-center">
                 <div class="col-2 ">
                     <div class="card">
-                        <img class="card-img-top" src="{{ $comics->thumb }}" alt="{{ $comics->title }} ">
+                        <img class="card-img-top" src="{{ $comic->thumb }}" alt="{{ $comic->title }} ">
                     </div>
                 </div>
                 <div class="col-5">
                     <div class="card px-3">
                         <div class="card-body">
                             <dd class="card-title ">
-                                {{ $comics->title }}
+                                {{ $comic->title }}
                             </dd>
                             <dt>Series: </dt>
                             <dd class="card-subtitle text-muted">
-                                {{ $comics->series }}
+                                {{ $comic->series }}
                             </dd>
                             <dt>type:</dt>
                             <dd class="mb-4 text-muted">
-                                {{ $comics->type }}
+                                {{ $comic->type }}
                             </dd>
                             <dt>
                                 Description:
                             </dt>
                             <dd class="card-text">
-                                {{ $comics->description }}
+                                {{ $comic->description }}
                             </dd>
 
                             <dt>Price:</dt>
                             <dd>
-                                {{ $comics->price }}
+                                {{ $comic->price }}
                             </dd>
                         </div>
                     </div>
