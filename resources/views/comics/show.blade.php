@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'single comic')
+@section('title', $comic->series )
 @section('content')
 
     <div class="bg-dark">

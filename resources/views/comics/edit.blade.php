@@ -3,7 +3,7 @@
 @section('content')
 <div class="bg-dark">
     <div class="container py-5 text-white">
-        <h2 class="text-center mb-5">Add new comic</h2>
+        <h2 class="text-center mb-5">Modifica comic  {{ $comic->title }}</h2>
         <div class="row justify-content-center">
             <div class="col-6 text-white">
                 <form action="{{ route('comics.update', $comic->id) }}" method="POST">
